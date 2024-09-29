@@ -17,8 +17,8 @@ S = np.diag(s)
 # reconstruct the image with k={2,10,40} singular vectors
 for i in [2,10,40]:
     # ---------- make your implementation here -------------
-    X_compressed =
-    Used_numbers =
+    X_compressed = np.dot(U[:,:i], np.dot(S[:i,:i], V[:i,:]))
+    Used_numbers = i
     # ---------- make your implementation here -------------
     plt.imshow(X_compressed)
     plt.show()
